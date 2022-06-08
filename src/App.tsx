@@ -1,7 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { useRecoilValue } from 'recoil';
-import { isDarkAtom } from './atoms';
+import ToDoList from './ToDoList';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro:wght@200;400&display=swap');
@@ -62,10 +61,10 @@ a {
 `;
 
 function App() {
-  const isDark = useRecoilValue(isDarkAtom);
   return (
     <>
       <GlobalStyle />
+      <ToDoList />
     </>
   );
 }
